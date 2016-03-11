@@ -1,32 +1,45 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+double soma;
+            double numero1;
+            double numero2;
+            double total;
+            string operacao;
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+            total = 0;
+            operacao = "+";
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+            Console.Write("Digite o primeiro numero:");
+            numero1 = Convert.ToDouble(Console.ReadLine()); 
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
+            Console.Write("Digite a operação:");
+            operacao = Console.ReadLine(); 
+                  
+            Console.WriteLine("Digite o Segundo numero:"); 
+            numero2 = Convert.ToDouble(Console.ReadLine());
+
+            soma = 0; 
+
+            
+                switch (operacao)
+                {
+                    case "+": total = numero1 + numero2;
+                        break;
+
+                    case "-": total = numero1 - numero2;
+                        break;
+                    case "/": total = numero1 / numero2;
+                        break;
+
+                    case "*": total = numero1 * numero2;
+                       
+                        break;
+            }
+
+             Console.WriteLine(" ");
+            
+            Console.WriteLine("O Resultado é:" + total);
+            Console.ReadKey();
+           
+
+           
